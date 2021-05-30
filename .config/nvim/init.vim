@@ -1,3 +1,6 @@
+" initial configs
+set number " -> show line numbers
+
 " Directorio de plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -13,11 +16,15 @@ call plug#end()
 " Luego de esta línea puedes agregar tus configuraciones y mappings
 
 " NERDTree configs
+
+let g:NERDTreeChDirMode = 2  " Cambia el directorio actual al nodo padre actual
 " Toggle NERDTree with f2
 map <F2> :NERDTreeToggle<CR> 
 
+
 " Theme configs -> Retro groove
 autocmd vimenter * ++nested colorscheme gruvbox	" -> Retro groove scheme thing
+
 
 " Vim-airline configs
 let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
