@@ -192,3 +192,8 @@ gaps outer 6
 
 # Execute Picom
 exec picom
+
+# i3 start-up commands
+exec xrandr --output eDP-1 --right-of HDMI-1 #<-- change the monitors position
+
+
