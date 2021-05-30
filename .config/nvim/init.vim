@@ -12,6 +12,9 @@ call plug#end()
 
 " Luego de esta línea puedes agregar tus configuraciones y mappings
 
+" NERDTree configs
+" Toggle NERDTree with f2
+map <F2> :NERDTreeToggle<CR> 
 
 " Theme configs -> Retro groove
 autocmd vimenter * ++nested colorscheme gruvbox	" -> Retro groove scheme thing
