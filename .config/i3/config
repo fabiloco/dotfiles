@@ -183,11 +183,13 @@ bar {
 	#output primary -> show only in the primary monitor
 	#output HDMI-1
 	font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-	font pango: CaskaydiaCove NF 9
-	separator_symbol "🍔"
+	font pango: CaskaydiaCove NF 10
+	separator_symbol "|"
 
 	colors {
 		background #282828
+		separator #665c54
+		statusline #ebdbb2
 	}
 }
 
