@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline' " -> Status bar with git integration and others
 Plug 'vim-airline/vim-airline-themes'  " Temas para airline
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " COC plugin. 
 Plug 'alvan/vim-closetag' " -> plugin to auto close html tags
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " -> vim-prettier for all format files
 
 call plug#end()
 
@@ -45,3 +46,6 @@ let g:LanguageClient_serverCommands = {
 
 " vim-closetag config file
 runtime vim-closetag.vim
+
+
+
