@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline-themes'  " Temas para airline
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " COC plugin. 
 Plug 'alvan/vim-closetag' " -> plugin to auto close html tags
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " -> vim-prettier for all format files
+Plug 'ryanoasis/vim-devicons' " -> NerdFonts icons for vim files and plugins.
 
 call plug#end()
 
