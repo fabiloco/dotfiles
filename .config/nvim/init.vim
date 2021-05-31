@@ -10,6 +10,7 @@ Plug 'morhetz/gruvbox' " -> Retro groove color scheme for Vim
 Plug 'preservim/nerdtree' " -> Nerdtree file system explorer
 Plug 'vim-airline/vim-airline' " -> Status bar with git integration and others
 Plug 'vim-airline/vim-airline-themes'  " Temas para airline
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " COC plugin. 
 
 call plug#end()
 
@@ -30,3 +31,13 @@ autocmd vimenter * ++nested colorscheme gruvbox	" -> Retro groove scheme thing
 let g:airline#extensions#tabline#enabled = 1  " Mostrar buffers abiertos (como pestañas)
 let g:airline_powerline_fonts = 1 " -> enable powerline font
 let g:airline_theme='gruvbox' " -> setting gruvbox color scheme in airline
+
+
+" Coc config file
+source coc.config
+
+" sql-language-server
+let g:LanguageClient_serverCommands = {
+    \ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
+    \ }
+
