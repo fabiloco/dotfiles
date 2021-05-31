@@ -11,6 +11,7 @@ Plug 'preservim/nerdtree' " -> Nerdtree file system explorer
 Plug 'vim-airline/vim-airline' " -> Status bar with git integration and others
 Plug 'vim-airline/vim-airline-themes'  " Temas para airline
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " COC plugin. 
+Plug 'alvan/vim-closetag' " -> plugin to auto close html tags
 
 call plug#end()
 
@@ -34,10 +35,13 @@ let g:airline_theme='gruvbox' " -> setting gruvbox color scheme in airline
 
 
 " Coc config file
-source coc.config
+runtime coc-config.vim
 
 " sql-language-server
 let g:LanguageClient_serverCommands = {
     \ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
     \ }
 
+
+" vim-closetag config file
+runtime vim-closetag.vim
