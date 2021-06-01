@@ -9,6 +9,7 @@
 general {
         colors = true
         interval = 5
+	markup = pango
 	color_good = "#b8bb26"
 	color_bad = "#fb4934"
 	color_degraded = "#fabd2f"
@@ -39,7 +40,7 @@ ethernet _first_ {
 }
 
 battery all {
-        format = "🔋 %status %percentage %remaining"
+        format = "<span background='#79740e' >🔋 %status %percentage %remaining </span>"
 	status_chr = "⚡ CHR"
         status_bat = "🔋 BAT"
         status_unk = "? UNK"

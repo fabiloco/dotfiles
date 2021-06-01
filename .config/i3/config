@@ -190,6 +190,12 @@ bar {
 		background #282828
 		separator #665c54
 		statusline #ebdbb2
+
+		# colour of border, background, and text
+	        focused_workspace       #2f343f #b57614 #d8dee8
+	        active_workspace        #2f343f #2f343f #d8dee8
+        	inactive_workspace      #2f343f #2f343f #d8dee8
+	        urgent_workspacei       #2f343f #ebcb8b #2f343f
 	}
 }
 
@@ -210,3 +216,15 @@ exec xrandr --output eDP-1 --right-of HDMI-1 #<-- change the monitors position
 exec --no-startup-id nitrogen --restore #<-- restore nitrogen wallpaper settings
 
 for_window [class=".*"] border pixel 2 # <-- hide window title and add border pixel
+
+
+
+
+
+# colour of border, background, text, indicator, and child_border
+client.focused              #b57614 #2f343f #d8dee8 #b57614 #d8dee8
+client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background           #2f343f
