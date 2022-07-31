@@ -1,0 +1,41 @@
+/*
+ * This file contains list of bookmarked directories.
+ * 
+ */
+[
+    {
+        "path": "/home/fabiloco",
+        "name": "Home",
+        "origin": ["lsp", "qt5"]
+    },
+    {
+        "path": "/home/fabiloco/Desktop",
+        "name": "Desktop",
+        "origin": ["lsp", "qt5"]
+    },
+    {
+        "path": "/home/fabiloco/Documents",
+        "name": "Documents",
+        "origin": ["lsp", "qt5"]
+    },
+    {
+        "path": "/home/fabiloco/Downloads",
+        "name": "Downloads",
+        "origin": ["lsp", "qt5"]
+    },
+    {
+        "path": "/home/fabiloco/Music",
+        "name": "Music",
+        "origin": ["lsp", "qt5"]
+    },
+    {
+        "path": "/home/fabiloco/Pictures",
+        "name": "Pictures",
+        "origin": ["lsp", "qt5"]
+    },
+    {
+        "path": "/home/fabiloco/Videos",
+        "name": "Videos",
+        "origin": ["lsp", "qt5"]
+    }
+]
