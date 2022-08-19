@@ -11,12 +11,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " File Explorer
-    Plug 'scrooloose/NERDTree'
+    "Plug 'scrooloose/NERDTree'
+    Plug 'kyazdani42/nvim-tree.lua'
+
+    " icons
+    Plug 'ryanoasis/vim-devicons'
+
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     
-    "tender colorscheme
+    "colorschemes
     Plug 'jacoborus/tender.vim'
+    Plug 'ellisonleao/gruvbox.nvim'
+    Plug 'wojciechkepka/vim-github-dark'
     
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
@@ -39,4 +46,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'VonHeikemen/lsp-zero.nvim'
 
+    " commenter plugin
+    Plug 'preservim/nerdcommenter'
 call plug#end()
