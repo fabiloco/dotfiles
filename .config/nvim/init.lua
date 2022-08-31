@@ -1,6 +1,11 @@
 -- source $HOME/.config/nvim/vim-plug/plugins.vim
 vim.cmd 'source $HOME/.config/nvim/vim-plug/plugins.vim'
 
+require('vim-closetag');
+require('lightline');
+require('treesitter');
+
+
 vim.opt.exrc=true
 vim.opt.tabstop=2
 vim.opt.softtabstop=2
@@ -12,9 +17,10 @@ vim.opt.signcolumn="yes"
 vim.opt.wrap = false
 
 vim.cmd [[
-	syntax enable
-	colorscheme ghdark
-	highlight LineNr ctermfg=yellow ctermbg=666 guibg=55 guifg=black
+  set colorcolumn=100
+  syntax enable
+  set background=dark
+	colorscheme gruvbox 
 ]]
 
 -- require("mason").setup()
@@ -22,10 +28,12 @@ vim.cmd [[
 
 -- Nerdtree keymaps
 
-vim.keymap.set('n', '<leader>n', ':NERDTreeFocus<CR>')
-vim.keymap.set('n', '<C-n>', ':NERDTree<CR>')
-vim.keymap.set('n', '<C-t>', ':NERDTreeToggle<CR>')
-vim.keymap.set('n', '<C-f>', ':NERDTreeFind<CR>')
+--[[
+   [vim.keymap.set('n', '<leader>n', ':NERDTreeFocus<CR>')
+   [vim.keymap.set('n', '<C-n>', ':NERDTree<CR>')
+   [vim.keymap.set('n', '<C-t>', ':NERDTreeToggle<CR>')
+   [vim.keymap.set('n', '<C-f>', ':NERDTreeFind<CR>')
+   ]]
 
 -- Telescope keymaps
 vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>')
@@ -38,9 +46,10 @@ lsp.preset('recommended')
 lsp.setup()
 lsp.nvim_workspace()
 
-
-
 -- ======== NVIM TREE ==========
+
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle');
+vim.keymap.set('n', '<leader>f', ':NvimTreeFocus');
 
 -- empty setup using defaults
 require("nvim-tree").setup()
