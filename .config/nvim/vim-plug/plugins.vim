@@ -42,6 +42,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Hightlight current line
     Plug 'miyakogi/conoline.vim'
 
+    " JSX syntax hightlight
+    Plug 'maxmellon/vim-jsx-pretty'
+
 
     " editorconfig vim plugin support 
     Plug 'gpanders/editorconfig.nvim'
