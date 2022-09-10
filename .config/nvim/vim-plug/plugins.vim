@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'tpope/vim-surround'
     
     "colorschemes
     Plug 'jacoborus/tender.vim'
@@ -27,6 +28,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'wojciechkepka/vim-github-dark'
 
     Plug 'https://github.com/sheerun/vim-wombat-scheme'
+
+    Plug 'Rigellute/rigel'
 
     " Find files
     Plug 'nvim-lua/plenary.nvim'

@@ -18,9 +18,10 @@ vim.opt.wrap = false
 
 vim.cmd [[
   set colorcolumn=100
+  """ set background=dark
+	""" colorscheme gruvbox 
   syntax enable
-  set background=dark
-	colorscheme gruvbox 
+  colorscheme rigel
 ]]
 
 -- require("mason").setup()
@@ -48,8 +49,8 @@ lsp.nvim_workspace()
 
 -- ======== NVIM TREE ==========
 
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle');
-vim.keymap.set('n', '<leader>f', ':NvimTreeFocus');
+vim.keymap.set('n', 'tt', ':NvimTreeToggle<CR>');
+vim.keymap.set('n', '<leader>f', ':NvimTreeFocus<CR>');
 
 -- empty setup using defaults
 require("nvim-tree").setup()
@@ -73,3 +74,5 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
+
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./my-cool-snippets" } })
