@@ -16,12 +16,15 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn="yes"
 vim.opt.wrap = false
 
+
 vim.cmd [[
+  syntax on
+	let g:vim_jsx_pretty_colorful_config = 1
   set colorcolumn=100
-  """ set background=dark
-	""" colorscheme gruvbox 
-  syntax enable
-  colorscheme rigel
+  set background=dark
+	""" colorscheme purify 
+	colorscheme gruvbox 
+  """ syntax enable
 ]]
 
 -- require("mason").setup()
@@ -76,3 +79,4 @@ require("nvim-tree").setup({
 })
 
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./my-cool-snippets" } })
+

@@ -4,7 +4,7 @@
         "equalizer": {
             "balance": 0.0,
             "bypass": false,
-            "input-gain": 9.3,
+            "input-gain": -36.0,
             "left": {
                 "band0": {
                     "frequency": 10.0,
@@ -139,7 +139,7 @@
             },
             "mode": "IIR",
             "num-bands": 13,
-            "output-gain": 10.2,
+            "output-gain": -36.0,
             "pitch-left": 0.0,
             "pitch-right": 0.0,
             "right": {

@@ -29,7 +29,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'https://github.com/sheerun/vim-wombat-scheme'
 
-    Plug 'Rigellute/rigel'
+    Plug 'kyoz/purify', { 'rtp': 'vim' }
+
+    Plug 'mangeshrex/everblush.vim'
 
     " Find files
     Plug 'nvim-lua/plenary.nvim'
@@ -46,7 +48,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'miyakogi/conoline.vim'
 
     " JSX syntax hightlight
+    Plug 'HerringtonDarkholme/yats.vim'
+    Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'leafgarland/typescript-vim'
 
 
     " editorconfig vim plugin support 

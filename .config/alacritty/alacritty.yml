@@ -47,8 +47,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 4
-    y: 4
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -186,7 +186,6 @@ font:
 # Gruvbox Material Dark Medium - Alacritty
 # https://gist.github.com/kamek-pf/2eae4f570061a97788a8a9ca4c893797
 
-
 colors:
   primary:
     background: '0x282828'
@@ -214,6 +213,38 @@ colors:
 
 ##############################
 
+# purify
+# https://github.com/kyoz/purify/tree/master/alacritty
+
+# Selection colors
+#selection:
+  #text:       '0xFAFAFA'
+  #background: '0x252834'
+
+## Normal colors
+#primary:
+  #background: '0x313440'
+  #foreground: '0xFAFAFA'
+#normal:
+  #black:   '0x282C34'
+  #red:     '0xFF6059'
+  #green:   '0x5FFF87'
+  #yellow:  '0xFFFF87'
+  #blue:    '0x5FAFFF'
+  #magenta: '0xAF87FF'
+  #cyan:    '0x5FAFFF'
+  #white:   '0xFAFAFA'
+
+## Bright colors
+#bright:
+  #black:   '0x282C34'
+  #red:     '0xFF6059'
+  #green:   '0x5FFF87'
+  #yellow:  '0xFFFF87'
+  #blue:    '0x5FAFFF'
+  #magenta: '0xAF87FF'
+  #cyan:    '0x5FAFFF'
+  #white:   '0xFAFAFA'
 
 
 # Colors (Tomorrow Night)
