@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
+
     " File Explorer
     "Plug 'scrooloose/NERDTree'
     Plug 'kyazdani42/nvim-tree.lua'
@@ -23,15 +24,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-surround'
     
     "colorschemes
-    Plug 'jacoborus/tender.vim'
     Plug 'ellisonleao/gruvbox.nvim'
-    Plug 'wojciechkepka/vim-github-dark'
-
-    Plug 'https://github.com/sheerun/vim-wombat-scheme'
-
-    Plug 'kyoz/purify', { 'rtp': 'vim' }
-
-    Plug 'mangeshrex/everblush.vim'
 
     " Find files
     Plug 'nvim-lua/plenary.nvim'
@@ -78,9 +71,26 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     "  Snippets
     Plug 'L3MON4D3/LuaSnip'
-
     Plug 'rafamadriz/friendly-snippets'
 
     " lsp configs
     Plug 'VonHeikemen/lsp-zero.nvim'
+
+    " vim startup screen
+    Plug 'mhinz/vim-startify'
+
+    " note taking plugin
+    Plug 'vimwiki/vimwiki'
+
+
+
+    " prettier formatter
+    
+    " post install (yarn install | npm install) then load plugin only for editing supported files
+    Plug 'prettier/vim-prettier', { 
+        \ 'do': 'yarn install',
+        \ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact'] }
+
+
+
 call plug#end()

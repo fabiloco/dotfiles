@@ -1,0 +1,77 @@
+{
+	"NextJS Link component import": {
+		"prefix": "nextlink",
+		"body": [
+			"import NextLink from 'next/link';"
+		],
+		"description": "Basic import of the Link component from NextJS"
+	},
+	"React function component with Typescript props definitions": {
+		"prefix": "trafc",
+		"body": [
+			"import { FC } from 'react';",
+			"",
+			"interface ${1:ComponentName}Props {",
+			"  ${2:prop}: ${3:boolean};",
+			"};",
+			"",
+			"export const ${1:ComponentName}: FC<${1:ComponentName}Props> = () => {",
+			"  return (",
+			"    <>${1:ComponentName}</>",
+			"  );",
+			"};"
+		],
+		"description": "React custom context for the ContextAPI with props and ts interface"
+	},
+	"React custom context": {
+		"prefix": "reactcontext",
+		"body": [
+			"import { createContext } from 'react';",
+			"",
+			"interface ${1:Name}ContextProps {",
+			"  ${2:prop}: ${3:boolean};",
+			"};",
+			"",
+			"export const ${1:Name}Context = createContext({} as ${1:Name}ContextProps);"
+		],
+		"description": "React custom context for the ContextAPI with props and ts interface"
+	},
+	"React custom provider": {
+		"prefix": "reactprovider",
+		"body": [
+			"import { FC, ReactNode, useReducer } from 'react';",
+			"",
+			"import {",
+			"  ${1:Name}Context,",
+			"  ${1:Name}Reducer,",
+			"} from './';",
+			"",
+			"export interface ${1:Name}State {",
+			"  ${2:property}: boolean;    ",
+			"};",
+			"",
+			"const ${1:Name}_INITIAL_STATE: ${1:Name}State = {",
+			"  ${2:property}: false,",
+			"};",
+			"",
+			"interface ${1:Name}ProviderProps {",
+			"  children: ReactNode;",
+			"};",
+			"",
+			"export const ${1:Name}Provider: FC<${1:Name}ProviderProps> = ({ children }) => {",
+			"  const [state, dispatch] = useReducer(${1:Name}Reducer, ${1:Name}_INITIAL_STATE);",
+			"",
+			"  return (",
+			"    <${1:Name}Context.Provider",
+			"      value={{",
+			"        ${2:property}: false,",
+			"      }}",
+			"    >",
+			"      { children }",
+			"    </${1:Name}Context.Provider>",
+			"  );",
+			"};"
+		],
+		"description": "React custom provider for the ContextAPI with props and ts interface"
+	}
+}

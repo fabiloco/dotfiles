@@ -18,6 +18,8 @@ vim.opt.wrap = false
 
 
 vim.cmd [[
+  set nocompatible
+  filetype plugin on
   syntax on
 	let g:vim_jsx_pretty_colorful_config = 1
   set colorcolumn=100
@@ -25,6 +27,9 @@ vim.cmd [[
 	""" colorscheme purify 
 	colorscheme gruvbox 
   """ syntax enable
+
+  """ prettier
+  " let g:prettier#autoformat = 1
 ]]
 
 -- require("mason").setup()
@@ -56,12 +61,13 @@ vim.keymap.set('n', 'tt', ':NvimTreeToggle<CR>');
 vim.keymap.set('n', '<leader>f', ':NvimTreeFocus<CR>');
 
 -- empty setup using defaults
-require("nvim-tree").setup()
+-- require("nvim-tree").setup()
 
 -- OR setup with some options
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
+    side = "right",
     adaptive_size = true,
     mappings = {
       list = {
@@ -73,10 +79,7 @@ require("nvim-tree").setup({
   renderer = {
     group_empty = true,
   },
-  filters = {
-    dotfiles = true,
-  },
 })
 
+-- importing my custom snippets
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./my-cool-snippets" } })
-
