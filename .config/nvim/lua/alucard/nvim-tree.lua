@@ -67,8 +67,11 @@ nvim_tree.setup {
 }
 
 
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+local opts = { noremap = true, silent = true }
 
 --== KEY MAPPING ==--
-vim.keymap.set('n', 'tt', ':NvimTreeToggle<CR>');
-vim.keymap.set('n', 'tf', ':NvimTreeFocus<CR>');
-
+keymap("n", "tt", ":NvimTreeToggle<CR>", opts)
+keymap("n", "tf", ":NvimTreeFocus<CR>", opts)

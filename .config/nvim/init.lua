@@ -9,5 +9,6 @@ require "alucard.comment"
 require "alucard.nvim-tree"
 require "alucard.telescope"
 require "alucard.lualine"
+require "alucard.bufferline"
 
 

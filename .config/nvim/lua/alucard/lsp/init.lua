@@ -7,7 +7,4 @@ end
 
 require "alucard.lsp.mason"
 require("alucard.lsp.handlers").setup()
-
-
-
--- require "alucard.lsp.null-ls"
+require "alucard.lsp.null-ls"
