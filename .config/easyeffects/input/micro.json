@@ -1,10 +1,10 @@
 {
     "input": {
         "blocklist": [],
-        "equalizer": {
+        "equalizer#0": {
             "balance": 0.0,
             "bypass": false,
-            "input-gain": 10.0,
+            "input-gain": 0.1,
             "left": {
                 "band0": {
                     "frequency": 10.0,
@@ -139,7 +139,7 @@
             },
             "mode": "IIR",
             "num-bands": 13,
-            "output-gain": 10.0,
+            "output-gain": 23.6,
             "pitch-left": 0.0,
             "pitch-right": 0.0,
             "right": {
@@ -277,7 +277,7 @@
             "split-channels": false
         },
         "plugins_order": [
-            "equalizer"
+            "equalizer#0"
         ]
     }
 }

@@ -220,6 +220,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # execute easyeffects
 exec_always --no-startup-id $HOME/.config/easyeffects/launch.sh
 
+exec ~/.fehbg
+
 for_window [class=".*"] border pixel 1 # <-- hide window title and add border pixel
 
 
