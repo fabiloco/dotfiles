@@ -1,16 +1,16 @@
 {
-	"Create a redux slice": {
-		"prefix": "reduxslice",
-		"body": [
-			"import { createSlice } from '@reduxjs/toolkit';",
-			"",
-			"export const ${1:template}Slice = createSlice({",
-			"  name: '${1:template}Slice',",
-			"  initialState: {",
-			"    counter: 10,",
-		  "  },",
-			"  reducers: {",
-			"    increment: (state, /* action */ ) => {",
+  "Create a redux slice": {
+    "prefix": "reduxslice",
+    "body": [
+      "import { createSlice } from '@reduxjs/toolkit';",
+      "",
+      "export const ${1:template}Slice = createSlice({",
+      "  name: '${1:template}Slice',",
+      "  initialState: {",
+      "    counter: 10,",
+      "  },",
+      "  reducers: {",
+      "    increment: (state, /* action */ ) => {",
       "      //! https://react-redux.js.org/tutorials/quick-start",
       "      // Redux Toolkit allows us to write 'mutating' logic in reducers. It",
       "      // doesn't actually mutate the state because it uses the Immer library,",
@@ -19,14 +19,26 @@
       "      state.counter += 1;",
       "    },",
       "  }",
-			"});",
-			"",
-			"",
-
-
-			"// Action creators are generated for each case reducer function",
-			"export const { increment } = ${1:template}Slice.actions;"
-		],
-		"description": "basic template of a redux slice"
-	}	
+      "});",
+      "",
+      "",
+      "// Action creators are generated for each case reducer function",
+      "export const { increment } = ${1:template}Slice.actions;"
+    ],
+    "description": "basic template of a redux slice"
+  },
+  "Zustand store definition": {
+    "prefix": "zsjs",
+    "body": [
+      "import { create } from 'zustand'",
+      "",
+      "const use${1:Name}Store = create((set) => ({",
+      "  ${2:nameLowercase}: 0,",
+      "  actions: {",
+      "    increment: () => set((state) => ({ ${2:nameLowercase}: state.${2:nameLowercase} + 1 })),",
+      "  },",
+      "}));"
+    ],
+    "description": "Zustand basic store definition with Javascript"
+  }
 }

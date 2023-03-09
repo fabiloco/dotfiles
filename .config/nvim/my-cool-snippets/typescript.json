@@ -1,48 +1,68 @@
-
 {
-	"React custom reducer": {
-		"prefix": "reactreducer",
-		"body": [
-			"import { ${1:Name}State } from './${1:Name}Provider';",
-			"",
-			"type ${1:Name}ActionType = ",
-			"| { type: '${1:Name}/OpenSidebar'; }",
-			"| { type: '${1:Name}/CloseSidebar'; }",
-			"",
-			"export const ${1:Name}Reducer = ( state: ${1:Name}State, action: ${1:Name}ActionType ): ${1:Name}State => {",
-			"",
-			"  switch (action.type) {",
-			"    case '${1:Name}/OpenSidebar':",
-			"      return {",
-			"       ...state,",
-			"       sidemenuOpen: true,",
-			"      };",
-			"    case '${1:Name}/CloseSidebar':",
-			"      return {",
-			"        ...state,",
-			"        sidemenuOpen: false,",
-			"      };",
-			"",
-			"    default:"	,
-			"      return state;",
-			"  };",
-			"};"
-		],
-		"description": "React custom reducer for the ContextAPI with props and ts interface"
-	},
-	"NextJS api endpoing": {
-		"prefix": "nextapi",
-		"body": [
-			"import type { NextApiRequest, NextApiResponse } from 'next'",
-			"",
-			"type Data = {",
-			"  name: string,",
-			"};",
-			"",
-			"export default function (req: NextApiRequest, res: NextApiResponse<Data>) {",
-			"  res.status(200).json({ name: 'Example' });",
-			"};"
-		],
-		"description": "NextJS api template to built upon with typescript"
-	}
+  "React custom reducer": {
+    "prefix": "reactreducer",
+    "body": [
+      "import { ${1:Name}State } from './${1:Name}Provider';",
+      "",
+      "type ${1:Name}ActionType = ",
+      "| { type: '${1:Name}/OpenSidebar'; }",
+      "| { type: '${1:Name}/CloseSidebar'; }",
+      "",
+      "export const ${1:Name}Reducer = ( state: ${1:Name}State, action: ${1:Name}ActionType ): ${1:Name}State => {",
+      "",
+      "  switch (action.type) {",
+      "    case '${1:Name}/OpenSidebar':",
+      "      return {",
+      "       ...state,",
+      "       sidemenuOpen: true,",
+      "      };",
+      "    case '${1:Name}/CloseSidebar':",
+      "      return {",
+      "        ...state,",
+      "        sidemenuOpen: false,",
+      "      };",
+      "",
+      "    default:",
+      "      return state;",
+      "  };",
+      "};"
+    ],
+    "description": "React custom reducer for the ContextAPI with props and ts interface"
+  },
+  "NextJS api endpoint": {
+    "prefix": "nextapi",
+    "body": [
+      "import type { NextApiRequest, NextApiResponse } from 'next'",
+      "",
+      "type Data = {",
+      "  name: string,",
+      "};",
+      "",
+      "export default function (req: NextApiRequest, res: NextApiResponse<Data>) {",
+      "  res.status(200).json({ name: 'Example' });",
+      "};"
+    ],
+    "description": "NextJS api template to built upon with typescript"
+  },
+  "Zustand store definition": {
+    "prefix": "zsts",
+    "body": [
+      "import { create } from 'zustand'",
+      "",
+      "interface ${1:Name}Store {",
+      "  ${2:nameLower}: number",
+      "  actions: {",
+      "    increase: (by: number) => void",
+      "  },",
+      "};",
+      "",
+      "const use${1:Name}Store = create<${1:Name}Store>((set) => ({",
+      "  ${2:nameLower}: 0,",
+      "  actions: {",
+      "    increase: (by) => set((state) => ({ ${2:nameLower}: state.${2:nameLower} + by })),",
+      "  },",
+      "}));"
+    ],
+    "description": "Zustand basic store definition with Typescript"
+  }
 }

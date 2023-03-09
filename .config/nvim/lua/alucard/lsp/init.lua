@@ -1,13 +1,8 @@
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
-  return
+	return
 end
 
-
-
-require "alucard.lsp.mason"
+require("alucard.lsp.mason")
 require("alucard.lsp.handlers").setup()
-
-
-
--- require "alucard.lsp.null-ls"
+require("alucard.lsp.null-ls")
