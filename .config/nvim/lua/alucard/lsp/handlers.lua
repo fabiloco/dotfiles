@@ -22,7 +22,7 @@ M.setup = function()
 	end
 
 	local config = {
-		virtual_text = false, -- disable virtual text
+		virtual_text = true, -- disable virtual text
 		signs = {
 			active = signs, -- show signs
 		},
@@ -48,7 +48,6 @@ M.setup = function()
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
 		border = "rounded",
 	})
-
 end
 
 local function lsp_keymaps(bufnr)
@@ -71,6 +70,8 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 end
 
+local i = 0
+
 M.on_attach = function(client, bufnr)
 	if client.name == "tsserver" then
 		client.server_capabilities.documentFormattingProvider = false
@@ -81,11 +82,14 @@ M.on_attach = function(client, bufnr)
 	end
 
 	lsp_keymaps(bufnr)
-	local status_ok, illuminate = pcall(require, "illuminate")
-	if not status_ok then
-		return
+
+	-- winbar/status bar plugin that shows the current code context
+	local navic_status_ok, navic = pcall(require, "nvim-navic")
+	if navic_status_ok then
+		if client.server_capabilities.documentSymbolProvider then
+			navic.attach(client, bufnr)
+		end
 	end
-	illuminate.on_attach(client)
 end
 
 return M
