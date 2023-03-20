@@ -92,6 +92,11 @@ return packer.startup(function(use)
 	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- LSP diagnostics and code actions
 
+	use({
+		"SmiteshP/nvim-navic",
+		requires = "neovim/nvim-lspconfig",
+	})
+
 	-- Tresitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -149,7 +154,7 @@ return packer.startup(function(use)
 	use("lukas-reineke/indent-blankline.nvim")
 
 	-- illuminate words under the cursor
-	use("RRethy/vim-illuminate")
+	use("yamatsum/nvim-cursorline")
 
 	-- Auto restore sessions
 	use({
