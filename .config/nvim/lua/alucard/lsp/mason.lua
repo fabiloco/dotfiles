@@ -5,6 +5,9 @@ local servers = {
 	"cssls",
 	"cssmodules_ls",
 	"omnisharp",
+	"rust_analyzer",
+	"gopls",
+	"tailwindcss",
 }
 
 local settings = {
