@@ -1,0 +1,12 @@
+#!/bin/bash
+
+selected=$(echo "integrated
+hybrid
+nvidia
+" | rofi -dmenu -p "select graphics mode")
+
+[[ -z $selected ]] && exit
+
+echo "you selected $selected"
+
+kitty --start-as minimized --hold sudo envycontrol --s $selected

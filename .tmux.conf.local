@@ -1,0 +1,11 @@
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+ # for neovim
+set -g @resurrect-strategy-nvim 'session'
+
+
+# restore last tmux session
+set -g @continuum-restore 'on'
+# excecute tmux server once pc is turn on
+set -g @continuum-boot 'on'

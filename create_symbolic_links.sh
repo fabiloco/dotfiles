@@ -1,17 +1,27 @@
 #!/usr/bin/zsh
 DOTFILES_DIR=`pwd`
 
-# symbolic links of .tmux
-ln -s $CONFIG_DIR/.tmux/.tmux.conf ~/
+symlink() {
+  if [ -e ~/$1 ]; then
+    echo "Found existing file, created backup: ~/${1}.bak"
+    mv ~/$1 ~/$1.bak
+  fi
+  ln -sf ~/dotfiles/$1 ~/$1;
+}
 
-# symbolic links of .walpapers folder
-# ln -s $CONFIG_DIR/.walpapers ~/
+symlink .zshrc
+symlink .zsh_aliases
+symlink .zsh_env
 
+symlink .tmux.conf.local
+
+
+symlink .wallpapers
 
 # symbolic links of .config folder
 cd .config/
 
 for FOLDER in *
 do 
-	ln -s $DOTFILES_DIR/.config/$FOLDER ~/.config
+  symlink .config/$FOLDER
 done

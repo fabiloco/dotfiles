@@ -1,0 +1,1 @@
+alias tnfc="tmux attach -t nfc-health-security-2"

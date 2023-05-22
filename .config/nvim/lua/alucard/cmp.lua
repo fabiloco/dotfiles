@@ -106,10 +106,10 @@ cmp.setup {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
-      -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
 
-      vim_item.kind = string.format('%s (%s)', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-      vim_item.menu = ({
+      -- vim_item.kind = string.format('%s (%s)', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+
+      local menu = ({
         nvim_lsp = "[LSP]",
         nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
@@ -118,12 +118,10 @@ cmp.setup {
       })[entry.source.name]
 
 
-      -- local kind = string.format("%s", kind_icons[vim_item.kind])
-      -- local strings = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-      -- kind.kind = " " .. (strings[1] or "") .. " "
-      -- kind.menu = "    (" .. (strings[2] or "") .. ")"
-      --
-      -- return kind
+      vim_item.menu = string.format("%s %s", vim_item.kind, menu)
+
+      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+
       return vim_item
     end,
   },
