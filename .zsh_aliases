@@ -1,7 +1,7 @@
 alias tnfc="tmux attach -t nfc-health-security-2"
 alias dotfiles="tmux attach -t dotfiles-6"
 
-alias update="sudo pacman -Syu"
+alias update="sudo pacman -Syyu"
 
 alias wall1="feh --bg-scale ~/dotfiles/.wallpapers/wall1.png"
 alias wall2="feh --bg-scale ~/dotfiles/.wallpapers/wall2.png"

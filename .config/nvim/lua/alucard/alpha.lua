@@ -17,10 +17,10 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
 	dashboard.button("SPC f f", "  Find file", ":Telescope find_files <CR>"),
-	dashboard.button("SPC f g", "  Find words", ":Telescope live_grep <CR>"),
+	dashboard.button("SPC f g", "󰈬  Find words", ":Telescope live_grep <CR>"),
 	dashboard.button("SPC f s", "󰺄  Open session", ":Telescope session-lens search_session <CR>"),
 
-	dashboard.button("q", "  Quit NVIM", ":qa<CR>"),
+	dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
 }
 
 alpha.setup(dashboard.opts)
