@@ -11,7 +11,7 @@ symlink() {
 
 symlink .zshrc
 symlink .zsh_aliases
-symlink .zsh_env
+symlink .zshenv
 
 symlink .tmux.conf.local
 
