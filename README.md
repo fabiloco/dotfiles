@@ -1,7 +1,7 @@
 # dotfiles
 A repo to store all my desktop configurations
 
-# Setup dotfiles
+## Setup dotfiles
 to setup automatically a new evironment with this dotfiles, simply run the following command:
 
 ```bash
