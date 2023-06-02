@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+selected=$(echo "latam
+us" | rofi -dmenu -p "select a keyboard layout")
+
+[[ -z $selected ]] && exit
+
+echo "you selected $selected"
+
+kitty --start-as minimized --hold sudo setxkbmap -layout $selected

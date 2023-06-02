@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+# Execute the setxkbmap -query command and store the output
+layout_info=$(setxkbmap -query)
+
+# Extract the layout value using text manipulation
+layout=$(echo "$layout_info" | awk -F' ' '/layout/ {print $2}')
+
+# Display the layout value
+echo "⌨️ $layout"
