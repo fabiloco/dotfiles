@@ -7,4 +7,6 @@ us" | rofi -dmenu -p "select a keyboard layout")
 
 echo "you selected $selected"
 
-kitty --start-as minimized --hold sudo setxkbmap -layout $selected
+# kitty --start-as minimized --hold sudo setxkbmap -layout $selected
+
+setxkbmap -layout $selected

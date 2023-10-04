@@ -241,6 +241,9 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 ## zoom with boomer
 bindsym Ctrl+Shift+z exec --no-startup-id ~/boomer/boomer
 
+## keyboard layout menu
+bindsym Ctrl+Shift+k exec --no-startup-id ~/dotfiles/.config/polybar/scripts/keyboard-layout-menu
+
 # colour of border, background, text, indicator, and child_border
 client.focused              #b57614 #2f343f #d8dee8 #b57614 #d8dee8
 client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
