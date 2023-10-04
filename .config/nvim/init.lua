@@ -13,3 +13,5 @@ require("alucard.bufferline")
 -- require("alucard.cursorline")
 require("alucard.navic")
 require("alucard.rest")
+
+require'lspconfig'.gdscript.setup{}
