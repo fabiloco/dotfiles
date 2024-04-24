@@ -125,11 +125,11 @@ return packer.startup(function(use)
   })
 
   -- telescope
-  use({
-    "nvim-telescope/telescope.nvim",
-    requires = { { "nvim-lua/plenary.nvim" } },
-    tag = "0.1.0",
-  })
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.4',
+    -- or                            , branch = '0.1.x',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
 
   -- lualine status bar
   use({
@@ -182,45 +182,30 @@ return packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-  use {
-    "rest-nvim/rest.nvim",
-    requires = { "nvim-lua/plenary.nvim" },
+  -- use {
+  --   "rest-nvim/rest.nvim",
+  --   rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
+  --   config = function()
+  --     require("rest-nvim").setup()
+  --   end,
+  -- }
+  use { 'BlackLight/nvim-http' }
+  use { 'ixru/nvim-markdown' }
+
+  use { 'anuvyklack/pretty-fold.nvim',
     config = function()
-      require("rest-nvim").setup({
-        -- Open request results in a horizontal split
-        result_split_horizontal = false,
-        -- Keep the http file buffer above|left when split horizontal|vertical
-        result_split_in_place = false,
-        -- Skip SSL verification, useful for unknown certificates
-        skip_ssl_verification = false,
-        -- Encode URL before making request
-        encode_url = true,
-        -- Highlight request on run
-        highlight = {
-          enabled = true,
-          timeout = 150,
-        },
-        result = {
-          -- toggle showing URL, HTTP info, headers at top the of result window
-          show_url = true,
-          show_http_info = true,
-          show_headers = true,
-          -- executables or functions for formatting response body [optional]
-          -- set them to false if you want to disable them
-          formatters = {
-            json = "jq",
-            html = function(body)
-              return vim.fn.system({ "tidy", "-i", "-q", "-" }, body)
-            end
-          },
-        },
-        -- Jump to request line on run
-        jump_to_request = false,
-        env_file = '.env',
-        custom_dynamic_variables = {},
-        yank_dry_run = true,
-      })
+      require('pretty-fold').setup()
     end
+  }
+  use {
+    'tamton-aquib/duck.nvim',
+    config = function()
+      vim.keymap.set('n', '<leader>dd', function() require("duck").hatch() end, {})
+      vim.keymap.set('n', '<leader>dk', function() require("duck").cook() end, {})
+    end
+  }
+  use {
+    'habamax/vim-godot'
   }
 
   -- Automatically set up your configuration after cloning packer.nvim

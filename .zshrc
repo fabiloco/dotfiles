@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh --no-use"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
 # export NVIM_LAZY=1
 
 # files sourcing
@@ -155,3 +156,17 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools"
 # flutter variables
 
 export PATH="$PATH:$HOME/code/flutter/bin"
+
+# tmuxifier
+export PATH="$PATH:$HOME/.tmuxifier/bin"
+
+# gi
+export PATH="$PATH:$HOME/go/bin"
+
+eval "$(tmuxifier init -)"
+
+# default editor
+export EDITOR="nvim"
+
+# Created by `pipx` on 2024-04-19 00:32:23
+export PATH="$PATH:/home/fabiloco/.local/bin"
