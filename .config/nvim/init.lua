@@ -1,5 +1,5 @@
-require("alucard.options")
 require("alucard.plugins")
+require("alucard.options")
 require("alucard.cmp")
 require("alucard.lsp")
 require("alucard.treesitter")
@@ -22,6 +22,5 @@ require("ibl").setup(
   {
     indent = { char = ".", smart_indent_cap = true },
     scope = { enabled = true },
-
   }
 )
