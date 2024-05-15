@@ -14,7 +14,7 @@ require("alucard.bufferline")
 require("alucard.navic")
 require("alucard.rest")
 
-require('lspconfig').gdscript.setup {}
+-- require('lspconfig').gdscript.setup {}
 vim.g.skip_ts_context_commentstring_module = true
 require('ts_context_commentstring').setup {}
 

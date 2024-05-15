@@ -1,14 +1,15 @@
 local servers = {
   "lua_ls",
   "jsonls",
-  "tsserver",
   "cssls",
   "cssmodules_ls",
-  "omnisharp",
   "rust_analyzer",
-  "gopls",
-  "tailwindcss",
-  "intelephense",
+
+  -- "typescript-language-server",
+  -- "tailwindcss",
+  -- "gopls",
+  -- "omnisharp",
+  -- "intelephense",
 }
 
 local settings = {

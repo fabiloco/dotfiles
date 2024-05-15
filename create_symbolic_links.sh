@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/bash
 DOTFILES_DIR=`pwd`
 
 symlink() {

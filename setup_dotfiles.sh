@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/bash
 
 # ensure git is installed
 if ! [ -x "$(command -v git)" ]; then
