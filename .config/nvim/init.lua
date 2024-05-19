@@ -16,7 +16,9 @@ require("alucard.rest")
 
 -- require('lspconfig').gdscript.setup {}
 vim.g.skip_ts_context_commentstring_module = true
-require('ts_context_commentstring').setup {}
+require('ts_context_commentstring').setup {
+  enable_autocmd = false,
+}
 
 require("ibl").setup(
   {
@@ -24,3 +26,6 @@ require("ibl").setup(
     scope = { enabled = true },
   }
 )
+
+require 'lspconfig'.tsserver.setup {}
+vim.lsp.set_log_level("debug")

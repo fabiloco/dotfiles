@@ -7,3 +7,6 @@ alias wall1="feh --bg-scale ~/dotfiles/.wallpapers/wall1.png"
 alias wall2="feh --bg-scale ~/dotfiles/.wallpapers/wall2.png"
 
 alias gnvim="nvim --listen ~/.cache/nvim/godot.pipe"
+
+alias se="cd /mnt/c/Users/Administrador/Desktop/se"
+

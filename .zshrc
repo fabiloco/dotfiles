@@ -160,7 +160,7 @@ export PATH="$PATH:$HOME/code/flutter/bin"
 # tmuxifier
 export PATH="$PATH:$HOME/.tmuxifier/bin"
 
-# gi
+# go
 export PATH="$PATH:$HOME/go/bin"
 
 eval "$(tmuxifier init -)"
@@ -170,3 +170,13 @@ export EDITOR="nvim"
 
 # Created by `pipx` on 2024-04-19 00:32:23
 export PATH="$PATH:/home/fabiloco/.local/bin"
+
+# export PATH="$PATH:/home/fabiloco/.nvm/versions/node/v22.2.0/bin"
+
+# pnpm
+export PNPM_HOME="/home/fabiloco/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

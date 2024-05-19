@@ -4,12 +4,12 @@ local servers = {
   "cssls",
   "cssmodules_ls",
   "rust_analyzer",
+  "tsserver",
 
-  -- "typescript-language-server",
-  -- "tailwindcss",
-  -- "gopls",
+  "tailwindcss",
+  "gopls",
   -- "omnisharp",
-  -- "intelephense",
+  "intelephense",
 }
 
 local settings = {
