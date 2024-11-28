@@ -16,16 +16,15 @@ require("alucard.rest")
 
 -- require('lspconfig').gdscript.setup {}
 vim.g.skip_ts_context_commentstring_module = true
-require('ts_context_commentstring').setup {
-  enable_autocmd = false,
-}
+require("ts_context_commentstring").setup({
+	enable_autocmd = false,
+})
 
-require("ibl").setup(
-  {
-    indent = { char = ".", smart_indent_cap = true },
-    scope = { enabled = true },
-  }
-)
+require("ibl").setup({
+	indent = { char = ".", smart_indent_cap = true },
+	scope = { enabled = true },
+})
 
-require 'lspconfig'.tsserver.setup {}
+-- require 'lspconfig'.tsserver.setup {}
+require("lspconfig").ts_ls.setup({})
 vim.lsp.set_log_level("debug")

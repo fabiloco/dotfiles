@@ -120,27 +120,27 @@ fi
 
 # NVM configs
 
-lazy_load_nvm() {
-  unset -f npm node nvm
-  export NVM_DIR=~/.nvm
-  [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
-}
-
-npm() {
-  lazy_load_nvm
-  npm $@
-}
-
-node() {
-  lazy_load_nvm
-  node $@
-}
-
-nvm() {
-  lazy_load_nvm
-  nvm $@
-} 
+# lazy_load_nvm() {
+#   unset -f npm node nvm
+#   export NVM_DIR=~/.nvm
+#   [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+#   [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+# }
+#
+# npm() {
+#   lazy_load_nvm
+#   npm $@
+# }
+#
+# node() {
+#   lazy_load_nvm
+#   node $@
+# }
+#
+# nvm() {
+#   lazy_load_nvm
+#   nvm $@
+# } 
 
 
 export BROWSER=/usr/bin/google-chrome-stable
@@ -180,3 +180,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+eval "$(fnm env --use-on-cd)"
+
+# fnm
+export PATH="/home/fabiloco/.fnm:$PATH"
+eval "`fnm env`"
